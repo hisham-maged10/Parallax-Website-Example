@@ -1,0 +1,451 @@
+/* ------------------------------------------------------------------- Variables ------------------------------------------------------------------------*/
+@font-face{
+            font-family:"verlag";
+            src:url(../fonts/Verlag-Book.otf);
+}
+
+@font-face{
+            font-family:"tungsten";
+            src:url(../fonts/Tungsten-Medium.otf);
+}
+
+@font-face{
+            font-family:"nue";
+            src:url(../fonts/helveticaneueltstd-bd-webfont.ttf);
+}
+
+
+/* ---------------------------------------------------------------- Global Variables ------------------------------------------------------------------------*/
+body{
+    padding:0;
+    margin:0;
+    overflow-x:hidden;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration:none;
+    color:#f6f7eb;
+}
+
+.clr{
+    clear:both;
+}
+/* ---------------------------------------------------------------- Header Styling ------------------------------------------------------------------------------*/
+
+header{
+    height:683px;
+    box-shadow:0px 3px 9px 3px black;
+}
+
+header #headerbg{
+    background-image:url(../images/header.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    height:683px;
+    width:100%;
+    filter:brightness(0.8);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-10;
+    filter:grayscale(0) blur(0);
+}
+header #logo{
+    display: inline-block;
+    width: 25%;
+    padding-top: 3%;
+    padding-left: 2%;
+    
+}
+
+header nav{
+    font-family:"verlag";
+    display:inline-block;
+    width:72%;
+}
+header nav li{
+    float:right;
+    width:8%;
+    list-style:none;
+    border:0;
+    line-height:40px;
+    font-size:23px;
+    margin-right:6%;
+    text-align:center;
+}
+header nav li:hover{
+    border-bottom:1px solid #f6f7eb;
+    width:11%;
+    transition:1.1s all ease-in-out;
+}
+header nav #login{
+    border: 2px solid #f6f7eb;
+    width:11%;
+    margin-right:4%;
+}
+header nav #login:hover{
+    border: 2px solid #f6f7eb;
+    width:14%;
+    transition:1.1s all ease-in-out;
+}
+header #middleSearch{
+    text-align:center;
+    margin:10.5% auto;
+    width:57%;
+}
+header #middleSearch h2{
+    padding:1%;
+    font-family:"tungsten";
+    letter-spacing:21px;
+    font-size:717%;
+    color:#f6f7eb;
+}
+header #searchBar{
+    width: 85%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 122px;
+    font-size: 31px;
+    font-family: nue;
+    color: #1D1D21;
+}
+header #middleSearch:hover ~ #headerbg{
+    filter:grayscale(0.4) blur(4px);
+    transform:scale(1.01);
+    transition:2s all ease-in-out;
+}
+/* ---------------------------------------------------------------- Main Part ------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------- Text Section ---------------------------------------------------------------------------*/
+#textSection{
+    background-color:rgba(19,53,81,0.8);
+}
+#textSection #text{
+    margin: 0 auto;
+    width: 34%;
+    text-align: center;
+    font-size: 288%;
+    font-family: "tungsten";
+    letter-spacing: 5px;
+    text-transform:uppercase;
+    color:#E94F37;
+    padding-top:3%;
+    text-shadow:0px 2px 4px red;
+}
+#textSection #pargText{
+    text-align: center;
+    margin: 0 auto;
+    width: 53%;
+    color: white;
+    padding: 2%;
+    font-size: 151%;
+    font-family:"verlag";
+    font-style:italic;
+}
+/* ---------------------------------------------------------------- Images Section ---------------------------------------------------------------------------*/
+#imageSection{
+    padding:3%;
+    background-color:rgba(19,53,81,0.8);
+    box-shadow: 0 6px 31px 5px #2B2D42;
+}
+#imageContainer{
+    padding:2%;
+    padding-bottom:0.2%;
+    background-color: #393E41;
+    box-shadow: 0px 13px 37px 3px #2B2D42;
+}
+#imageContainer div{
+    display:inline-block;
+    width:49%;
+    height:450px;
+}
+#firstSelection {
+    background-image:url(../images/selection1.jpg);
+    background-position:center;
+    background-size:cover;
+    filter:brightness(1);
+    margin-left:9px;
+    
+}
+#firstSelection:hover{
+    filter:brightness(0.8);
+    transition:1.5s all ease-in-out;
+}
+#firstSelection #firstOverlay{
+    background-color:transparent;
+    opacity:0;
+    width:100%;
+}
+#firstSelection #firstOverlay:hover{
+    background-color:rgba(72, 81, 90, 0.8);
+    opacity:1;
+    transition:1.5s all ease-in-out;
+}
+#firstOverlay:hover .overlayParg{
+    transition-delay:.2s;
+    top: 47%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#firstOverlay:hover .overlayHeader{
+    transition-delay:.2s;
+    top:43%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#firstOverlay:hover .overlayRule{
+    transition-delay:.2s;
+    transform:rotate(0deg);
+    opacity:1;
+    width:19%;
+    transition-duration: 1.3s;
+}
+#firstSelection:hover{
+    background-color:rgba(255,0,0,0.9);
+}
+.overlayHeader{
+    color:white;
+    position: relative;
+    top: 30%;
+    left: 33%;
+    opacity:0;
+    font-size: 412%;
+    font-family:tungsten;
+}
+
+.overlayParg{
+   color: white;
+    position: relative;
+    top: 67%;
+    left: 33%;
+    opacity:0;
+    font-size: 98%;
+    width: 35%;
+    text-align: center;
+    font-family:verlag;
+}
+
+.overlayRule{
+    color: white;
+    position: relative;
+    top: 45%;
+    left: 41%;
+    opacity:0;
+    transform:rotate(90deg);
+    font-size: 94%;
+    width: 14%;
+    text-align: center;
+}
+
+#secondSelection {
+    background-image:url(../images/selection2.png);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    right:4px;
+}
+#secondSelection:hover{
+    filter:brightness(0.8);
+    transition:1.5s all ease-in-out;
+}
+#secondSelection #secondOverlay{
+    background-color:transparent;
+    opacity:0;
+    width:100%;
+}
+#secondSelection #secondOverlay:hover{
+    background-color:#ffaa5fbd;
+    opacity:1;
+    transition:1.5s all ease-in-out;
+}
+#secondOverlay:hover .overlayParg{
+    transition-delay:.2s;
+    top: 47%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#secondOverlay:hover .overlayHeader{
+    transition-delay:.2s;
+    top:43%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#secondOverlay:hover .overlayRule{
+    transition-delay:.2s;
+    transform:rotate(0deg);
+    opacity:1;
+    width:19%;
+    transition-duration: 1.3s;
+}
+#secondSelection:hover{
+    background-color:rgba(255,0,0,0.9);
+}
+#thirdSelection {
+    background-image:url(../images/selection3.jpg);
+    background-position:top;
+    background-size:cover;
+    margin-left:9px;
+    position:relative;
+    bottom:35px;
+
+}
+#thirdSelection:hover{
+    filter:brightness(0.8);
+    transition:1.5s all ease-in-out;
+}
+#thirdSelection #thirdOverlay{
+    background-color:transparent;
+    opacity:0;
+    width:100%;
+}
+#thirdSelection #thirdOverlay:hover{
+    background-color:#4171a19a;
+    opacity:1;
+    transition:1.5s all ease-in-out;
+}
+#thirdOverlay:hover .overlayParg{
+    transition-delay:.2s;
+    top: 47%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#thirdOverlay:hover .overlayHeader{
+    transition-delay:.2s;
+    top:43%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#thirdOverlay:hover .overlayRule{
+    transition-delay:.2s;
+    transform:rotate(0deg);
+    opacity:1;
+    width:19%;
+    transition-duration: 1.3s;
+}
+#fourthSelection {
+    background-image:url(../images/selection4.png);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    right:4px;
+    bottom: 35px;
+}
+#fourthSelection:hover{
+    filter:brightness(0.8);
+    transition:1.5s all ease-in-out;
+}
+#fourthSelection #fourthOverlay{
+    background-color:transparent;
+    opacity:0;
+    width:100%;
+}
+#fourthSelection #fourthOverlay:hover{
+    background-color:#a8c4d6c4;
+    opacity:1;
+    transition:1.5s all ease-in-out;
+}
+#fourthOverlay:hover .overlayParg{
+    transition-delay:.2s;
+    top: 47%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#fourthOverlay:hover .overlayHeader{
+    transition-delay:.2s;
+    top:43%;
+    opacity:1;
+    transition-duration: 1.5s;
+}
+#fourthOverlay:hover .overlayRule{
+    transition-delay:.2s;
+    transform:rotate(0deg);
+    opacity:1;
+    width:19%;
+    transition-duration: 1.3s;
+}
+/*-----------------------------------------------------------------------------Image with text on it -------------------------------------------------------------------------*/
+#parallaxImg{
+    width:100%;
+    height:747px;
+    background-image:url(../images/about.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    position:relative;
+    z-index:-6;
+}
+#shape{
+    z-index: -5;
+    width: 58%;
+    background-color: #3a566a;
+    height: 100%;
+    transform: skew(20deg);
+    float: right;
+    position: relative;
+    left: -9%;
+    bottom: 80.4%;
+    box-shadow: -1px 4px 15px 2px #1d1d1d;
+}
+#shapeText{
+    text-align: center;
+    color: white;
+    float: right;
+    position: relative;
+    right: 64%;
+    top: 35;
+    font-size: 328%;
+    font-family: nue;
+}
+#shapeParag{
+    position: relative;
+    top: 46;
+    font-size: 44%;
+    left: 67%;
+    text-align: left;
+    width: 45%;
+    line-height: 3;
+
+}
+#shapeHeader{
+    position: relative;
+    left: 59%;
+}
+/*-------------------------------------------------------------------------Footers -----------------------------------------------------------------------------------------*/
+#map{
+    background-color:#393E41;
+    width:100%;
+    color:#f6f7eb;
+    text-align:center;
+    display:inline-block;
+    height:10%;
+    position:relative;
+    bottom:77%;
+}
+#map ul li{
+    display: inline-block;
+    width: 9%;
+    font-size: 145%;
+    padding: 1%;
+}
+#cp{
+    text-align:center;
+    background-color:#2B2D42;
+    color:#f6f7eb;
+    font-family: Verlag;
+}
+#fin{
+    background-image: url(../images/header3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 748px;
+    margin-top: -680px;
+    
+}
